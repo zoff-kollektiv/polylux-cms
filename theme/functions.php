@@ -2,6 +2,70 @@
 
   $PRODUCTION_URL = 'https://develop--polylux.netlify.com';
 
+  $BLOCKS = [
+    [
+      'name' => 'facts',
+      'title' => __('Facts'),
+      'render_callback'	=> 'acf_block_render_callback',
+      'category' 	=> 'common',
+      'icon' => 'editor-ul',
+      'keywords' 	=> array('fact'),
+    ],
+  ];
+
+  function acf_block_render_callback($block) {
+    $slug = str_replace('acf/', '', $block['name']);
+
+    if(file_exists(get_theme_file_path("blocks/{$slug}.php"))) {
+      include(get_theme_file_path("blocks/{$slug}.php"));
+    }
+  }
+
+  function acf_init_blocks() {
+    global $BLOCKS;
+
+    if( function_exists('acf_register_block') ) {
+      foreach($BLOCKS as $block) {
+        acf_register_block($block);
+      }
+    }
+  }
+
+  function add_blocks_to_api() {
+    if (!function_exists('use_block_editor_for_post_type')) {
+      require ABSPATH . 'wp-admin/includes/post.php';
+    }
+
+    $post_types = get_post_types_by_support(['editor']);
+
+    foreach ($post_types as $post_type) {
+      if (use_block_editor_for_post_type($post_type)) {
+        register_rest_field(
+          $post_type,
+          'blocks',
+          [
+            'get_callback' => function(array $post) {
+              return parse_blocks($post['content']['raw']);
+            },
+          ]
+        );
+      }
+    }
+  }
+
+  function allowed_block_types($allowed_blocks) {
+    global $BLOCKS;
+
+    $acf_blocks = array_map(function($block) {
+      return "acf/{$block['name']}";
+    }, $BLOCKS);
+
+    // disable all core blocks
+    // $core_blocks = [];
+
+    return array_merge($acf_blocks, $core_blocks);
+  }
+
   function register_post_types() {
     register_post_type('projects',
       array(
@@ -69,4 +133,8 @@
   add_action('save_post', 'trigger_netlify_deploy');
   add_action('admin_menu','cleanup_admin');
   add_action('admin_bar_menu', 'custom_visit_site_url', 80);
+
+  add_action('rest_api_init', 'add_blocks_to_api');
+  add_action('acf/init', 'acf_init_blocks');
+  add_filter('allowed_block_types', 'allowed_block_types');
 ?>
