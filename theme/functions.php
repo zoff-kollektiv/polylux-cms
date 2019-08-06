@@ -10,6 +10,12 @@
       'category' 	=> 'common',
       'icon' => 'editor-ul',
       'keywords' 	=> array('fact'),
+      'post_types' => array('projects'),
+      'mode' => 'auto',
+      'supports' => array(
+        'align' => false,
+        'multiple' => false
+      )
     ],
   ];
 
@@ -24,9 +30,9 @@
   function acf_init_blocks() {
     global $BLOCKS;
 
-    if( function_exists('acf_register_block') ) {
+    if( function_exists('acf_register_block_type') ) {
       foreach($BLOCKS as $block) {
-        acf_register_block($block);
+        acf_register_block_type($block);
       }
     }
   }
