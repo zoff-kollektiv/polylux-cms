@@ -1,0 +1,28 @@
+.accordion {
+  list-style: none;
+  padding-left: 0;
+
+  &__panel {
+    & + & {
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__title {
+    background-color: var(--color-grey-dark);
+    color: white;
+    font-family: var(--font-lulo-family);
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.043rem;
+    line-height: 1.2;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 1.5rem 10rem 1.25rem 1.5rem;
+  }
+
+  &__content {
+    background-color: var(--color-grey-light);
+    padding: 1.5rem;
+  }
+}
