@@ -94,7 +94,8 @@
 
     $allowed_core_blocks = [
       'core/heading',
-      'core/paragraph'
+      'core/paragraph',
+      'core/button'
     ];
 
     return array_merge($acf_blocks, $allowed_core_blocks);
@@ -172,6 +173,7 @@
         </div>';
       },
     ));
+
     register_block_type('core/heading', array(
       'render_callback' => function($attributes, $content) {
         return '<div class="constraint">
@@ -223,4 +225,9 @@
   add_filter('allowed_block_types', 'allowed_block_types');
   add_action('init', 'overwrite_core_blocks');
   add_action( 'widgets_init', 'register_footer_widgets', 20 );
+
+  add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
+  function wps_deregister_styles() {
+      wp_dequeue_style( 'wp-block-library' );
+  }
 ?>

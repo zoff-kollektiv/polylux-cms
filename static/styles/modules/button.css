@@ -1,3 +1,4 @@
+.wp-block-button__link,
 .button {
   border-radius: 1rem;
   display: inline-block;
@@ -38,5 +39,17 @@
     &:focus {
       background-color: var(--color-magenta-dark);
     }
+  }
+}
+
+.wp-block-button__link {
+  background-color: var(--color-red);
+  color: white;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-red-dark);
   }
 }
