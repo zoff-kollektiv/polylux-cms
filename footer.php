@@ -1,9 +1,13 @@
     <footer class="footer">
       <div class="constraint">
-        <?php get_template_part('template-parts/logo/logo'); ?>
-        <?php if ( is_active_sidebar( 'footer-contact' ) ) : ?>
-          <?php dynamic_sidebar( 'footer-contact' ); ?>
-        <?php endif; ?>
+        <section>
+          <?php get_template_part('template-parts/logo/logo'); ?>
+          <?php if ( is_active_sidebar( 'footer-contact' ) ) : ?>
+            <?php dynamic_sidebar( 'footer-contact' ); ?>
+          <?php endif; ?>
+        </section>
+
+        <?php get_template_part('template-parts/follow-us/follow-us'); ?>
 
         <?php
           wp_nav_menu(

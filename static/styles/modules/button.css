@@ -8,6 +8,7 @@
   padding: 1.5rem 5.25rem;
   text-decoration: none;
 
+  &--theme-white,
   &--theme-red {
     background-color: var(--color-red);
     color: white;
@@ -15,6 +16,26 @@
     &:hover,
     &:focus {
       background-color: var(--color-red-dark);
+    }
+  }
+
+  &--theme-cyan {
+    background-color: var(--color-cyan);
+    color: white;
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-cyan-dark);
+    }
+  }
+
+  &--theme-magenta {
+    background-color: var(--color-magenta);
+    color: white;
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-magenta-dark);
     }
   }
 }

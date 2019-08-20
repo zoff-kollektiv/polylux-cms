@@ -1,0 +1,28 @@
+.follow-us {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-lulo-family);
+
+  &__title {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  &__item {
+    display: inline-block;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: var(--color-cyan);
+    }
+  }
+
+  &__icon {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}

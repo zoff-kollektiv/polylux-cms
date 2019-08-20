@@ -8,4 +8,9 @@
   &__title {
     text-align: center;
   }
+
+  a:hover,
+  a:focus {
+    color: var(--color-cyan);
+  }
 }

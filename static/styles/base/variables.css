@@ -2,7 +2,9 @@
   --color-red: hsla(0, 100%, 50%, 1);
   --color-red-dark: hsla(0, 100%, 40%, 1);
   --color-cyan: hsla(180, 100%, 50%, 1);
+  --color-cyan-dark: hsla(180, 100%, 40%, 1);
   --color-magenta: hsla(300, 98%, 38%, 1);
+  --color-magenta-dark: hsla(300, 98%, 28%, 1);
 
   --color-grey-dark: #414141;
   --color-grey-medium: #6B6B6B;

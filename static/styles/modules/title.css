@@ -1,10 +1,14 @@
 .title {
   font-family: var(--font-lulo-family);
   font-size: 2.6rem;
+  letter-spacing: 0.043rem;
   line-height: 1.2;
   margin-top: 5rem;
   text-align: center;
-  text-transform: uppercase;
+
+  &--is-small {
+    font-size: 1.6rem;
+  }
 
   &__subtitle {
     display: block;

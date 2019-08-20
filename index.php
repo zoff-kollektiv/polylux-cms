@@ -6,6 +6,10 @@
   <main class="content">
     <?php
       while (have_posts()) : the_post();
+        if (!is_front_page()) {
+          get_template_part('template-parts/title/title', 'page');
+        }
+
         get_template_part('template-parts/content/content');
       endwhile;
     ?>
