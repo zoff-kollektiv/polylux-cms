@@ -1,6 +1,5 @@
 <?php
 
-  $title = get_field('title');
   $number_of_projects = get_field('number_of_projects');
   $projects = get_posts([
     'numberposts' => $number_of_projects,
@@ -11,14 +10,6 @@
 
 <?php if ($projects) : ?>
   <section class="projects">
-    <div class="constraint">
-      <?php if ($title) : ?>
-        <h2 class="projects__title">
-          <?php echo $title; ?>
-        </h2>
-      <?php endif; ?>
-    </div>
-
     <div class="constraint constraint--width-wide">
       <ul class="projects__list">
         <?php foreach ( $projects as $project ) : ?>

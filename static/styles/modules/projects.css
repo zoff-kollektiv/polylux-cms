@@ -6,15 +6,6 @@
   padding: 1.5rem;
   width: 100%;
 
-  &__title {
-    font-family: var(--font-lulo-family);
-    font-size: 1.5rem;
-    line-height: 1.2;
-    margin-bottom: 2.5rem;
-    margin-top: 0;
-    text-align: center;
-  }
-
   &__list {
     display: grid;
     grid-gap: 1.5rem;
