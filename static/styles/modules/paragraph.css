@@ -4,5 +4,10 @@
 
   > * {
     margin-bottom: 0;
+
+    > a:hover,
+    > a:focus {
+      color: var(--color-cyan);
+    }
   }
 }
