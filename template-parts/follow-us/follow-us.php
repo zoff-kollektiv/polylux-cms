@@ -6,7 +6,7 @@ $twitter_url = get_field('twitter_url', 'option');
 ?>
 
 <div class="follow-us">
-  <strong class="follow-us__title">Folge uns auf</strong>
+  <strong class="follow-us__title">Folge POLYLUX auf</strong>
 
   <div>
     <?php if($instagram_url) : ?>
