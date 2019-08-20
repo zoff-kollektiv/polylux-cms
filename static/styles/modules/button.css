@@ -1,0 +1,20 @@
+.button {
+  border-radius: 1rem;
+  display: inline-block;
+  font-size: 2.2rem;
+  font-family: var(--font-bitter-family);
+  letter-spacing: 0.03rem;
+  line-height: 1.2;
+  padding: 1.5rem 5.25rem;
+  text-decoration: none;
+
+  &--theme-red {
+    background-color: var(--color-red);
+    color: white;
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-red-dark);
+    }
+  }
+}

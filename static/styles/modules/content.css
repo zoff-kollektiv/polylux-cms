@@ -1,0 +1,7 @@
+.content {
+  align-items: center;
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5rem;
+}

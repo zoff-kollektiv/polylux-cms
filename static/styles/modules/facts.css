@@ -1,0 +1,30 @@
+.facts {
+  background-color: var(--color-grey-light);
+  margin-top: 5rem;
+  padding: 2.5rem;
+  width: 100%;
+
+  &__title {
+    font-family: var(--font-lulo-family);
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    margin-bottom: 0;
+    margin-top: 2.5rem;
+    padding-left: 1.5rem;
+  }
+
+  &__item {
+    font-family: var(--font-bitter-family);
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.043rem;
+    line-height: 1.5;
+  }
+}

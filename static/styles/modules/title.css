@@ -1,0 +1,7 @@
+.title {
+  font-family: var(--font-lulo-family);
+  font-size: 2.6rem;
+  line-height: 1.2;
+  margin-top: 5rem;
+  text-transform: uppercase;
+}

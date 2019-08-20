@@ -1,0 +1,19 @@
+.menu {
+  background-color: var(--color-grey-medium);
+  color: white;
+  list-style: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+
+  a {
+    display: block;
+    font-family: var(--font-lulo-family);
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,11 @@
+.footer-widget {
+  &--account {
+    font-family: var(--font-lulo-family);
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  &__title {
+    text-align: center;
+  }
+}

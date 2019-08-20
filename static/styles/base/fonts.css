@@ -1,0 +1,44 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Bitter';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Bitter'), local('Bitter Regular'), local('Bitter-Regular'),
+    url(/wp-content/themes/theme/dist/fonts/Bitter.woff2) format('woff2'),
+    url(/wp-content/themes/theme/dist/fonts/Bitter.woff) format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Bitter';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Bitter Bold'), local('Bitter-Bold'),
+    url(/wp-content/themes/theme/dist/fonts/Bitter-Bold.woff2) format('woff2'),
+    url(/wp-content/themes/theme/dist/fonts/Bitter-Bold.woff) format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Bitter';
+  font-style: italic;
+  font-weight: 400;
+  src: url(/wp-content/themes/theme/dist/fonts/Bitter-Italic.woff2) format('woff2'),
+    url(/wp-content/themes/theme/dist/fonts/Bitter-Italic.woff) format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Lulo Clean One';
+  font-weight: 400;
+  src: url(/wp-content/themes/theme/dist/fonts/LuloCleanOne.woff2) format('woff2'),
+    url(/wp-content/themes/theme/dist/fonts/LuloCleanOne.woff) format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Lulo Clean One';
+  font-weight: 700;
+  src: url(/wp-content/themes/theme/dist/fonts/LuloCleanOne-Bold.woff2) format('woff2'),
+    url(/wp-content/themes/theme/dist/fonts/LuloCleanOne-Bold.woff) format('woff');
+}

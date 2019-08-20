@@ -1,0 +1,36 @@
+.projects-item {
+  height: 100%;
+  position: relative;
+
+  &__link {
+    color: white;
+    display: block;
+    font-size: 0;
+    height: 100%;
+    line-height: 1;
+  }
+
+  &__image {
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  &__title {
+    font-family: var(--font-lulo-family);
+    font-size: 2.3rem;
+    hyphens: auto;
+    left: 50%;
+    letter-spacing: 0.033rem;
+    line-height: 1.3;
+    padding: 1rem 1.5rem;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 2;
+  }
+}

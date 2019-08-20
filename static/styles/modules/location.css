@@ -1,0 +1,10 @@
+.location {
+  font-size: 1.4rem;
+  font-family: var(--font-lulo-family);
+  font-weight: 700;
+  letter-spacing: 0.025rem;
+  line-height: 1.2;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-transform: uppercase;
+}

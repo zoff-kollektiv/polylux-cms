@@ -1,0 +1,16 @@
+.footer {
+  align-items: center;
+  background-color: var(--color-grey-dark);
+  color: white;
+  font-family: var(--font-bitter-family);
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 1.5rem 3rem 1.5rem;
+
+  .constraint {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+}
