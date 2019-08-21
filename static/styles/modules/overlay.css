@@ -1,0 +1,44 @@
+.overlay {
+  height: 100%;
+  mix-blend-mode: multiply;
+  opacity: 0.75;
+  position: absolute;
+  transform: rotate(45deg);
+  width: 100%;
+
+  &--position-bottom {
+    left: -5.5%;
+    bottom: -72%;
+  }
+
+  &--position-top {
+    left: 5.5%;
+    top: -72%;
+  }
+
+  &--position-left {
+    left: -72%;
+    top: 4.5%;
+  }
+
+  &--position-right {
+    right: -72%;
+    top: -4.5%;
+  }
+
+  &--theme-red {
+    background-color: var(--color-red);
+  }
+
+  &--theme-cyan {
+    background-color: var(--color-cyan);
+  }
+
+  &--theme-magenta {
+    background-color: var(--color-magenta);
+  }
+
+  &--theme-white {
+    background-color: white;
+  }
+}

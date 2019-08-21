@@ -15,9 +15,21 @@
         <?php foreach ( $projects as $project ) : ?>
           <li class="projects-item">
             <a href="<?php echo get_permalink($project->ID); ?>" class="projects-item__link">
-              <?php echo get_the_post_thumbnail($project->ID, 'project', [
+              <?php
+
+              echo get_the_post_thumbnail($project->ID, 'project', [
                 'class' => 'projects-item__image'
-              ]); ?>
+              ]);
+
+              $overlays = get_field('overlay', get_post_thumbnail_id($project->ID));
+
+              if ($overlays) {
+                foreach($overlays as $overlay) {
+                  echo '<div class="overlay overlay--theme-' . $overlay['color'] . ' overlay--position-' . $overlay['position'] . '"></div>';
+                }
+              }
+
+              ?>
 
               <h2 class="projects-item__title">
                 <?php echo $project->post_title; ?>
