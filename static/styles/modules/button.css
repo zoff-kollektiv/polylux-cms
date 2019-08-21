@@ -1,13 +1,16 @@
+.wpcf7-submit,
 .wp-block-button__link,
 .button {
+  border: 0;
   border-radius: 1rem;
+  cursor: pointer;
   display: inline-block;
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-family: var(--font-bitter-family);
   font-weight: 700;
   letter-spacing: 0.03rem;
   line-height: 1.2;
-  padding: 1.25rem 4.25rem;
+  padding: 1.5rem 4.25rem;
   text-decoration: none;
 
   &--theme-white,
@@ -42,6 +45,7 @@
   }
 }
 
+.wpcf7-submit,
 .wp-block-button__link {
   background-color: var(--color-red);
   color: white;

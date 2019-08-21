@@ -1,15 +1,17 @@
 .media-strip {
-  display: flex;
-  flex-direction: row;
-  height: 30rem;
-  justify-content: center;
-  list-style: none;
-  margin-bottom: 1.5rem;
-  margin-top: 1.5rem;
-  padding-left: 0;
+  &__list {
+    display: flex;
+    flex-direction: row;
+    height: 30rem;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    padding-left: 0;
 
-  > * + * {
-    margin-left: 1.5rem;
+    > * + * {
+      margin-left: 1.5rem;
+    }
   }
 
   &__image {

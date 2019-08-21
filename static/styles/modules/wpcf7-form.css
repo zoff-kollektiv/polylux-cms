@@ -1,0 +1,23 @@
+.wpcf7 {
+  &-form label {
+    font-family: var(--font-lulo-family);
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  &-text,
+  &-textarea {
+    background: white;
+    border: 2px solid white;
+    font-family: var(--font-bitter-family);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    width: 100%;
+
+    &:focus {
+      border-color: var(--color-cyan);
+    }
+  }
+}
