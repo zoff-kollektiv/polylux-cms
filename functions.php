@@ -143,24 +143,30 @@
   }
 
   function attachments_bw_filter($meta) {
-    $file = wp_upload_dir();
-    $file = trailingslashit($file['path']).$meta['sizes']['project-image']['file'];
+    $path = wp_upload_dir(); // get upload directory
+    $file = $path['basedir'].'/'.$meta['file']; // Get full size image
 
-    list($orig_type) = @getimagesize($file);
-    $image = wp_load_image($file);
+    $files[] = $file;
 
-    imagefilter($image, IMG_FILTER_GRAYSCALE);
+    foreach ($meta['sizes'] as $size) {
+      $files[] = $path['path'].'/'.$size['file'];
+    }
 
-    switch ($orig_type) {
-        case IMAGETYPE_GIF:
-            imagegif( $image, $file );
-            break;
-        case IMAGETYPE_PNG:
-            imagepng( $image, $file );
-            break;
-        case IMAGETYPE_JPEG:
-            imagejpeg( $image, $file );
-            break;
+    foreach ($files as $file) {
+      list($orig_w, $orig_h, $orig_type) = @getimagesize($file);
+      $image = wp_load_image($file);
+      imagefilter($image, IMG_FILTER_GRAYSCALE);
+      switch ($orig_type) {
+          case IMAGETYPE_GIF:
+              imagegif( $image, $file );
+              break;
+          case IMAGETYPE_PNG:
+              imagepng( $image, $file );
+              break;
+          case IMAGETYPE_JPEG:
+              imagejpeg( $image, $file );
+              break;
+      }
     }
 
     return $meta;
@@ -219,6 +225,7 @@
   ));
 
   add_theme_support('post-thumbnails');
+  add_image_size('project', 864, 1000, true);
 
   add_action('init', 'register_post_types');
   add_action('init', 'register_menus');
