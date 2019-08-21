@@ -5,7 +5,8 @@
   "main": "rollup.config.js",
   "scripts": {
     "develop": "rollup --config ./rollup.config.js --watch",
-    "build": "NODE_ENV=production rollup --config ./rollup.config.js"
+    "build": "NODE_ENV=production rollup --config ./rollup.config.js",
+    "lint": "prettier --write '**/*.php'"
   },
   "repository": {
     "type": "git",
@@ -30,5 +31,9 @@
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-postcss": "^2.0.3",
     "rollup-plugin-terser": "^5.1.1"
+  },
+  "devDependencies": {
+    "@prettier/plugin-php": "^0.11.2",
+    "prettier": "^1.18.2"
   }
 }

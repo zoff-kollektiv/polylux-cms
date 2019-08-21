@@ -1,6 +1,5 @@
 <?php
-  $theme = get_field('theme_color');
-?>
+$theme = get_field('theme_color'); ?>
 
 <header class="header header--theme-<?php echo $theme; ?>">
   <details class="header__details">
@@ -18,14 +17,10 @@
       </a>
     </summary>
 
-    <?php
-      wp_nav_menu(
-        array(
-          'theme_location' => 'header',
-          'container' => false,
-          'item_spacing' => 'discard'
-        )
-      );
-    ?>
+    <?php wp_nav_menu(array(
+        'theme_location' => 'header',
+        'container' => false,
+        'item_spacing' => 'discard'
+    )); ?>
   </details>
 </header>

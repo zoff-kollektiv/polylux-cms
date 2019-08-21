@@ -11,7 +11,9 @@
       <?php bloginfo('name'); ?>
     </title>
 
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/dist/index.css" />
+    <link rel="stylesheet" href="<?php bloginfo(
+        'template_directory'
+    ); ?>/dist/index.css" />
 
     <?php wp_head(); ?>
   </head>
