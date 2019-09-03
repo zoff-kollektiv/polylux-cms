@@ -3,7 +3,6 @@
 $metadata = get_field('metadata');
 $city = $metadata['city'];
 $state = $metadata['federal_state'];
-
 ?>
 
 <?php if ($city): ?>
