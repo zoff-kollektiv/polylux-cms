@@ -9,6 +9,7 @@
   &-textarea {
     background: white;
     border: 2px solid white;
+    box-shadow: none;
     font-family: var(--font-bitter-family);
     font-size: 1.5rem;
     font-weight: 400;
