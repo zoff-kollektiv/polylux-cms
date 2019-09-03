@@ -226,6 +226,12 @@ function register_footer_widgets()
     ));
 }
 
+function get_component($path, array $params = [])
+{
+    extract($params, EXTR_SKIP);
+    require get_template_directory() . '/components/' . $path . '.php';
+}
+
 acf_add_options_page(array(
     'page_title' => 'Theme General Settings',
     'menu_title' => 'Theme Settings',

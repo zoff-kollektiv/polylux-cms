@@ -10,7 +10,7 @@
         get_template_part('template-parts/location/location');
         get_template_part('template-parts/media-strip/media-strip');
         get_template_part('template-parts/call-to-action/call-to-action');
-        get_template_part('template-parts/follow-us/follow-us');
+        get_template_part('template-parts/share/share');
         get_template_part('template-parts/content/content');
         get_template_part('template-parts/call-to-action/call-to-action');
     endwhile; ?>
