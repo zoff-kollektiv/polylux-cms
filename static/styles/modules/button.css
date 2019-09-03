@@ -57,3 +57,7 @@
     background: var(--color-red-dark);
   }
 }
+
+.wpcf7-submit {
+  padding: 1.25rem 2.5rem;
+}
