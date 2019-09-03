@@ -15,45 +15,45 @@
 
   &--theme-white,
   &--theme-red {
-    background-color: var(--color-red);
+    background: var(--color-red);
     color: white;
 
     &:hover,
     &:focus {
-      background-color: var(--color-red-dark);
+      background: var(--color-red-dark);
     }
   }
 
   &--theme-cyan {
-    background-color: var(--color-cyan);
+    background: var(--color-cyan);
     color: white;
 
     &:hover,
     &:focus {
-      background-color: var(--color-cyan-dark);
+      background: var(--color-cyan-dark);
     }
   }
 
   &--theme-magenta {
-    background-color: var(--color-magenta);
+    background: var(--color-magenta);
     color: white;
 
     &:hover,
     &:focus {
-      background-color: var(--color-magenta-dark);
+      background: var(--color-magenta-dark);
     }
   }
 }
 
 .wpcf7-submit,
 .wp-block-button__link {
-  background-color: var(--color-red);
+  background: var(--color-red);
   color: white;
   margin-bottom: 3rem;
   margin-top: 3rem;
 
   &:hover,
   &:focus {
-    background-color: var(--color-red-dark);
+    background: var(--color-red-dark);
   }
 }
