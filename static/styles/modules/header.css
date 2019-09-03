@@ -55,7 +55,12 @@
 
     &:hover,
     &:focus {
-      color: var(--color-cyan);
+      color: white;
     }
+  }
+
+  &--theme-white &__logo-container:hover,
+  &--theme-white &__logo-container:focus {
+    color: var(--color-cyan);
   }
 }
