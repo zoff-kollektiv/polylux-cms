@@ -1,7 +1,9 @@
 <?php
 
-$city = get_field('city');
-$state = get_field('federal_state');
+$metadata = get_field('metadata');
+$city = $metadata['city'];
+$state = $metadata['federal_state'];
+
 ?>
 
 <?php if ($city): ?>
