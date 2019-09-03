@@ -116,6 +116,21 @@ function register_post_types()
         'menu_icon' => 'dashicons-media-document',
         'supports' => array('title', 'editor', 'thumbnail', 'revisions')
     ));
+
+    register_post_type('blog', array(
+        'labels' => array(
+            'name' => 'Blog',
+            'singular_name' => 'Blog'
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => array(
+            'slug' => 'blog'
+        ),
+        'show_in_rest' => true,
+        'menu_icon' => 'dashicons-format-aside',
+        'supports' => array('title', 'editor', 'author', 'revisions')
+    ));
 }
 
 function cleanup_admin()
